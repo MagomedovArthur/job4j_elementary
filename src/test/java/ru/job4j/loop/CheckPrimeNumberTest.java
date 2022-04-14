@@ -11,7 +11,7 @@ public class CheckPrimeNumberTest {
     public void when5() {
         int number = 5;
         boolean result = CheckPrimeNumber.check(number);
-        Assert.assertFalse(result);
+        Assert.assertTrue(result);
     }
 
     @Test
