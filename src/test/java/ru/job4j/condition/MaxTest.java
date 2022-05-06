@@ -42,4 +42,46 @@ public class MaxTest {
         int expected = 5;
         Assert.assertEquals(result, expected);
     }
+
+    @Test
+    public void whenMaxOF1And0And3Then3() {
+        int first = 1;
+        int second = 0;
+        int third = 3;
+        int result = Max.max(first, second, third);
+        int expected = 3;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void whenMaxOf19And23and22Then23() {
+        int first = 19;
+        int second = 23;
+        int third = 22;
+        int result = Max.max(first, second, third);
+        int expected = 23;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void whenMaxOf19And23and22And66Then66() {
+        int first = 19;
+        int second = 23;
+        int third = 22;
+        int fourth = 66;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 66;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void whenMaxOf19And23and22And6Then23() {
+        int first = 19;
+        int second = 23;
+        int third = 22;
+        int fourth = 6;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 23;
+        Assert.assertEquals(result, expected);
+    }
 }
