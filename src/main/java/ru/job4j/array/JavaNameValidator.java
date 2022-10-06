@@ -6,14 +6,14 @@ public class JavaNameValidator {
         if (name.isEmpty() || !isLowerLatinLetter(name.codePointAt(0))) {
             return false;
         }
-        for (int i = 0; i < name.length(); i++) {
+        for (int i = 1; i < name.length(); i++) {
             if (isLowerLatinLetter(name.codePointAt(i))
-                    || isSpecialSymbol(name.codePointAt(i))
-                    || isUpperLatinLetter(name.codePointAt(i))) {
-                return true;
+                    && isSpecialSymbol(name.codePointAt(i))
+                    && isUpperLatinLetter(name.codePointAt(i))) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static boolean isSpecialSymbol(int code) {
